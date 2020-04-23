@@ -1,0 +1,861 @@
+2020/03/21 21:26:30 [INFO] Terraform version: 0.12.21  
+2020/03/21 21:26:30 [INFO] Go runtime version: go1.12.13
+2020/03/21 21:26:30 [INFO] CLI args: []string{"C:\\ProgramData\\chocolatey\\lib\\terraform\\tools\\terraform.exe", "apply", "-auto-approve"}
+2020/03/21 21:26:30 [DEBUG] Attempting to open CLI config file: C:\Users\larsj\AppData\Roaming\terraform.rc
+2020/03/21 21:26:30 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/03/21 21:26:30 [INFO] CLI command args: []string{"apply", "-auto-approve"}
+2020/03/21 21:26:30 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/03/21 21:26:30 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/03/21 21:26:30 [DEBUG] New state was assigned lineage "07bbf4dd-c941-28f3-04ac-bfa67c7cc28b"
+2020/03/21 21:26:30 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/03/21 21:26:30 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/03/21 21:26:30 [DEBUG] checking for provider in "."
+2020/03/21 21:26:30 [WARN] found legacy provider "terraform-provider-artifactory.exe"
+2020/03/21 21:26:30 [DEBUG] checking for provider in "C:\\ProgramData\\chocolatey\\lib\\terraform\\tools"
+2020/03/21 21:26:30 [DEBUG] checking for provider in ".terraform\\plugins\\windows_amd64"
+2020/03/21 21:26:30 [DEBUG] found valid plugin: "artifactory", "0.0.0", "X:\\dev\\terraform-provider-artifactory\\terraform-provider-artifactory.exe"
+2020/03/21 21:26:30 [DEBUG] checking for provisioner in "."
+2020/03/21 21:26:30 [DEBUG] checking for provisioner in "C:\\ProgramData\\chocolatey\\lib\\terraform\\tools"
+2020/03/21 21:26:30 [DEBUG] checking for provisioner in ".terraform\\plugins\\windows_amd64"
+2020/03/21 21:26:30 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/03/21 21:26:30 [INFO] backend/local: starting Apply operation
+2020/03/21 21:26:30 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/03/21 21:26:30 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/03/21 21:26:30 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/03/21 21:26:30 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/03/21 21:26:30 [TRACE] statemgr.Filesystem: existing snapshot has lineage "df950759-08eb-fe2e-4c2c-fa51863507c9" serial 1
+2020/03/21 21:26:30 [TRACE] statemgr.Filesystem: locking terraform.tfstate using LockFileEx
+2020/03/21 21:26:30 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/03/21 21:26:30 [TRACE] backend/local: reading remote state for workspace "default"
+2020/03/21 21:26:30 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/03/21 21:26:30 [TRACE] statemgr.Filesystem: read snapshot with lineage "df950759-08eb-fe2e-4c2c-fa51863507c9" serial 1
+2020/03/21 21:26:30 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/03/21 21:26:30 [TRACE] backend/local: building context for current working directory
+2020/03/21 21:26:30 [TRACE] terraform.NewContext: starting
+2020/03/21 21:26:30 [TRACE] terraform.NewContext: resolving provider version selections
+2020/03/21 21:26:31 [TRACE] terraform.NewContext: loading provider schemas
+2020/03/21 21:26:31 [TRACE] LoadSchemas: retrieving schema for provider type "artifactory"
+2020-03-21T21:26:31.047+0100 [INFO]  plugin: configuring client automatic mTLS
+2020-03-21T21:26:31.072+0100 [DEBUG] plugin: starting plugin: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe args=[X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe]
+2020-03-21T21:26:31.074+0100 [DEBUG] plugin: plugin started: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe pid=21136
+2020-03-21T21:26:31.074+0100 [DEBUG] plugin: waiting for RPC address: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe
+2020-03-21T21:26:31.128+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 2020/03/21 21:26:31 LAJ No Server found:
+2020-03-21T21:26:31.130+0100 [INFO]  plugin.terraform-provider-artifactory.exe: configuring server automatic mTLS: timestamp=2020-03-21T21:26:31.130+0100
+2020-03-21T21:26:31.161+0100 [DEBUG] plugin: using plugin: version=5
+2020-03-21T21:26:31.161+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2020-03-21T21:26:31.161+0100
+2020/03/21 21:26:31 [TRACE] GRPCProvider: GetSchema
+2020/03/21 21:26:31 [TRACE] GRPCProvider: Close
+2020-03-21T21:26:31.225+0100 [DEBUG] plugin: plugin process exited: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe pid=21136
+2020-03-21T21:26:31.225+0100 [DEBUG] plugin: plugin exited
+2020/03/21 21:26:31 [TRACE] terraform.NewContext: complete
+2020/03/21 21:26:31 [TRACE] backend/local: finished building terraform.Context
+2020/03/21 21:26:31 [TRACE] backend/local: requesting interactive input, if necessary
+2020/03/21 21:26:31 [TRACE] Context.Input: Prompting for provider arguments
+2020/03/21 21:26:31 [TRACE] Context.Input: Provider provider.artifactory declared at main.tf:1,1-23
+2020/03/21 21:26:31 [TRACE] Context.Input: Input for provider.artifactory: map[string]cty.Value{}
+2020/03/21 21:26:31 [TRACE] backend/local: running validation operation
+2020/03/21 21:26:31 [INFO] terraform: building graph: GraphTypeValidate
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/03/21 21:26:31 [TRACE] ConfigTransformer: Starting for path: 
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeValidatableResource
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/03/21 21:26:31 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/03/21 21:26:31 [TRACE] AttachResourceConfigTransformer: attaching to "artifactory_permission.first3" (*terraform.NodeValidatableResource) config from main.tf:6,1-43
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/03/21 21:26:31 [TRACE] ProviderConfigTransformer: attaching to "provider.artifactory" provider configuration from main.tf:1,1-23
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeValidatableResource
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/03/21 21:26:31 [TRACE] ProviderTransformer: artifactory_permission.first3 is provided by provider.artifactory or inherited equivalent
+2020/03/21 21:26:31 [TRACE] ProviderTransformer: exact match for provider.artifactory serving artifactory_permission.first3
+2020/03/21 21:26:31 [DEBUG] ProviderTransformer: "artifactory_permission.first3" (*terraform.NodeValidatableResource) needs provider.artifactory
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeValidatableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  artifactory_permission.first3 - *terraform.NodeValidatableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/03/21 21:26:31 [TRACE] AttachSchemaTransformer: attaching resource schema to artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.artifactory
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/03/21 21:26:31 [DEBUG] ReferenceTransformer: "provider.artifactory" references: []
+2020/03/21 21:26:31 [DEBUG] ReferenceTransformer: "artifactory_permission.first3" references: []
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeValidatableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodeValidatableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeValidatableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodeValidatableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory (close) - *terraform.graphNodeCloseProvider
+    artifactory_permission.first3 - *terraform.NodeValidatableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeValidatableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodeValidatableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory (close) - *terraform.graphNodeCloseProvider
+    artifactory_permission.first3 - *terraform.NodeValidatableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.artifactory (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeValidatableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodeValidatableResource
+  provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory (close) - *terraform.graphNodeCloseProvider
+    artifactory_permission.first3 - *terraform.NodeValidatableResource
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.artifactory (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/03/21 21:26:31 [DEBUG] Starting graph walk: walkValidate
+2020/03/21 21:26:31 [TRACE] dag/walk: updating graph
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "provider.artifactory (close)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "root"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "provider.artifactory"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "artifactory_permission.first3" waiting on "provider.artifactory"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "provider.artifactory (close)" waiting on "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "root" waiting on "provider.artifactory (close)"
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "artifactory_permission.first3", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "provider.artifactory (close)", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "provider.artifactory"
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory": starting visit (*terraform.NodeApplyableProvider)
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory": evaluating
+2020/03/21 21:26:31 [TRACE] [walkValidate] Entering eval tree: provider.artifactory
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-03-21T21:26:31.241+0100 [INFO]  plugin: configuring client automatic mTLS
+2020-03-21T21:26:31.266+0100 [DEBUG] plugin: starting plugin: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe args=[X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe]
+2020-03-21T21:26:31.268+0100 [DEBUG] plugin: plugin started: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe pid=19244
+2020-03-21T21:26:31.268+0100 [DEBUG] plugin: waiting for RPC address: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe
+2020-03-21T21:26:31.327+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 2020/03/21 21:26:31 LAJ No Server found:
+2020-03-21T21:26:31.328+0100 [INFO]  plugin.terraform-provider-artifactory.exe: configuring server automatic mTLS: timestamp=2020-03-21T21:26:31.328+0100
+2020-03-21T21:26:31.356+0100 [DEBUG] plugin: using plugin: version=5
+2020-03-21T21:26:31.356+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2020-03-21T21:26:31.355+0100
+2020/03/21 21:26:31 [TRACE] BuiltinEvalContext: Initialized "artifactory" provider for provider.artifactory
+2020/03/21 21:26:31 [TRACE] <root>: eval: terraform.EvalNoop
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2020/03/21 21:26:31 [TRACE] buildProviderConfig for provider.artifactory: using explicit config only
+2020/03/21 21:26:31 [TRACE] GRPCProvider: GetSchema
+2020/03/21 21:26:31 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/03/21 21:26:31 [TRACE] <root>: eval: terraform.EvalNoop
+2020/03/21 21:26:31 [TRACE] <root>: eval: terraform.EvalNoop
+2020/03/21 21:26:31 [TRACE] [walkValidate] Exiting eval tree: provider.artifactory
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory": visit complete
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": starting visit (*terraform.NodeValidatableResource)
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": evaluating
+2020/03/21 21:26:31 [TRACE] [walkValidate] Entering eval tree: artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/03/21 21:26:31 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/03/21 21:26:31 [TRACE] [walkValidate] Exiting eval tree: artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": visit complete
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "provider.artifactory (close)"
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory (close)": evaluating
+2020/03/21 21:26:31 [TRACE] [walkValidate] Entering eval tree: provider.artifactory (close)
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/03/21 21:26:31 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/03/21 21:26:31 [TRACE] GRPCProvider: Close
+2020/03/21 21:26:31 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/03/21 21:26:31 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/03/21 21:26:31 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/03/21 21:26:31 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-03-21T21:26:31.420+0100 [DEBUG] plugin: plugin process exited: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe pid=19244
+2020-03-21T21:26:31.421+0100 [DEBUG] plugin: plugin exited
+2020/03/21 21:26:31 [TRACE] [walkValidate] Exiting eval tree: provider.artifactory (close)
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory (close)": visit complete
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "root"
+2020/03/21 21:26:31 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/03/21 21:26:31 [TRACE] vertex "root": visit complete
+2020/03/21 21:26:31 [INFO] backend/local: apply calling Refresh
+2020/03/21 21:26:31 [INFO] terraform: building graph: GraphTypeRefresh
+2020/03/21 21:26:31 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/03/21 21:26:31 [TRACE] ConfigTransformer: Starting for path: 
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/03/21 21:26:31 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/03/21 21:26:31 [TRACE] ProviderConfigTransformer: attaching to "provider.artifactory" provider configuration from main.tf:1,1-23
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/03/21 21:26:31 [DEBUG] pruning unused provider.artifactory
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer with new graph:
+  ------
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.graphTransformerMulti (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.CloseProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  root - terraform.graphNodeRoot
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer (no changes)
+2020/03/21 21:26:31 [DEBUG] Starting graph walk: walkRefresh
+2020/03/21 21:26:31 [TRACE] dag/walk: updating graph
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "root"
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "root"
+2020/03/21 21:26:31 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/03/21 21:26:31 [TRACE] vertex "root": visit complete
+2020/03/21 21:26:31 [INFO] backend/local: apply calling Plan
+2020/03/21 21:26:31 [INFO] terraform: building graph: GraphTypePlan
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/03/21 21:26:31 [TRACE] ConfigTransformer: Starting for path: 
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodePlannableResource
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/03/21 21:26:31 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/03/21 21:26:31 [TRACE] AttachResourceConfigTransformer: attaching to "artifactory_permission.first3" (*terraform.NodePlannableResource) config from main.tf:6,1-43
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/03/21 21:26:31 [TRACE] ProviderConfigTransformer: attaching to "provider.artifactory" provider configuration from main.tf:1,1-23
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodePlannableResource
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/03/21 21:26:31 [TRACE] ProviderTransformer: artifactory_permission.first3 is provided by provider.artifactory or inherited equivalent
+2020/03/21 21:26:31 [TRACE] ProviderTransformer: exact match for provider.artifactory serving artifactory_permission.first3
+2020/03/21 21:26:31 [DEBUG] ProviderTransformer: "artifactory_permission.first3" (*terraform.NodePlannableResource) needs provider.artifactory
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodePlannableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  artifactory_permission.first3 - *terraform.NodePlannableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/03/21 21:26:31 [TRACE] AttachSchemaTransformer: attaching resource schema to artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.artifactory
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/03/21 21:26:31 [DEBUG] ReferenceTransformer: "artifactory_permission.first3" references: []
+2020/03/21 21:26:31 [DEBUG] ReferenceTransformer: "provider.artifactory" references: []
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodePlannableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodePlannableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/03/21 21:26:31 [TRACE] ForcedCBDTransformer: "artifactory_permission.first3" (*terraform.NodePlannableResource) has no CBD descendent, so skipping
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodePlannableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodePlannableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory (close) - *terraform.graphNodeCloseProvider
+    artifactory_permission.first3 - *terraform.NodePlannableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodePlannableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodePlannableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory (close) - *terraform.graphNodeCloseProvider
+    artifactory_permission.first3 - *terraform.NodePlannableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.artifactory (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodePlannableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodePlannableResource
+  provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory (close) - *terraform.graphNodeCloseProvider
+    artifactory_permission.first3 - *terraform.NodePlannableResource
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.artifactory (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/03/21 21:26:31 [DEBUG] Starting graph walk: walkPlan
+2020/03/21 21:26:31 [TRACE] dag/walk: updating graph
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "provider.artifactory"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "provider.artifactory (close)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "root"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "root" waiting on "provider.artifactory (close)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "artifactory_permission.first3" waiting on "provider.artifactory"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "provider.artifactory (close)" waiting on "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "artifactory_permission.first3", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "provider.artifactory (close)", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "provider.artifactory"
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory": starting visit (*terraform.NodeApplyableProvider)
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory": evaluating
+2020/03/21 21:26:31 [TRACE] [walkPlan] Entering eval tree: provider.artifactory
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-03-21T21:26:31.458+0100 [INFO]  plugin: configuring client automatic mTLS
+2020-03-21T21:26:31.483+0100 [DEBUG] plugin: starting plugin: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe args=[X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe]
+2020-03-21T21:26:31.485+0100 [DEBUG] plugin: plugin started: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe pid=33288
+2020-03-21T21:26:31.485+0100 [DEBUG] plugin: waiting for RPC address: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe
+2020-03-21T21:26:31.537+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 2020/03/21 21:26:31 LAJ No Server found:
+2020-03-21T21:26:31.538+0100 [INFO]  plugin.terraform-provider-artifactory.exe: configuring server automatic mTLS: timestamp=2020-03-21T21:26:31.538+0100
+2020-03-21T21:26:31.569+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2020-03-21T21:26:31.568+0100
+2020-03-21T21:26:31.569+0100 [DEBUG] plugin: using plugin: version=5
+2020/03/21 21:26:31 [TRACE] BuiltinEvalContext: Initialized "artifactory" provider for provider.artifactory
+2020/03/21 21:26:31 [TRACE] <root>: eval: terraform.EvalNoop
+2020/03/21 21:26:31 [TRACE] <root>: eval: terraform.EvalNoop
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2020/03/21 21:26:31 [TRACE] buildProviderConfig for provider.artifactory: using explicit config only
+2020/03/21 21:26:31 [TRACE] GRPCProvider: GetSchema
+2020/03/21 21:26:31 [TRACE] GRPCProvider: Configure
+2020/03/21 21:26:31 [TRACE] [walkPlan] Exiting eval tree: provider.artifactory
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory": visit complete
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": starting visit (*terraform.NodePlannableResource)
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": evaluating
+2020/03/21 21:26:31 [TRACE] [walkPlan] Entering eval tree: artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/03/21 21:26:31 [TRACE] [walkPlan] Exiting eval tree: artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": expanding dynamic subgraph
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodePlannableResourceInstance
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/03/21 21:26:31 [DEBUG] Resource instance state not found for node "artifactory_permission.first3", instance artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/03/21 21:26:31 [DEBUG] ReferenceTransformer: "artifactory_permission.first3" references: []
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": entering dynamic subgraph
+2020/03/21 21:26:31 [TRACE] dag/walk: updating graph
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": starting visit (*terraform.NodePlannableResourceInstance)
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": evaluating
+2020/03/21 21:26:31 [TRACE] [walkPlan] Entering eval tree: artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/03/21 21:26:31 [TRACE] EvalReadState: reading state for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] EvalReadState: no state present for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalValidateSelfRef
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/03/21 21:26:31 [TRACE] Re-validating config for "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/03/21 21:26:31 [TRACE] GRPCProvider: PlanResourceChange
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalCheckPreventDestroy
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/03/21 21:26:31 [TRACE] EvalWriteState: writing current state object for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/03/21 21:26:31 [TRACE] EvalWriteDiff: recorded Create change for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] [walkPlan] Exiting eval tree: artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": visit complete
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": dynamic subgraph completed successfully
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": visit complete
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/03/21 21:26:31 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/03/21 21:26:31 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/03/21 21:26:31 [TRACE] [walkPlan] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "provider.artifactory (close)"
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/03/21 21:26:31 [TRACE] [walkPlan] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory (close)": evaluating
+2020/03/21 21:26:31 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020/03/21 21:26:31 [TRACE] [walkPlan] Entering eval tree: provider.artifactory (close)
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2020/03/21 21:26:31 [TRACE] GRPCProvider: Close
+2020-03-21T21:26:31.634+0100 [DEBUG] plugin: plugin process exited: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe pid=33288
+2020-03-21T21:26:31.637+0100 [DEBUG] plugin: plugin exited
+2020/03/21 21:26:31 [TRACE] [walkPlan] Exiting eval tree: provider.artifactory (close)
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory (close)": visit complete
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "root"
+2020/03/21 21:26:31 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/03/21 21:26:31 [TRACE] vertex "root": visit complete
+2020/03/21 21:26:31 [INFO] backend/local: apply calling Apply
+2020/03/21 21:26:31 [INFO] terraform: building graph: GraphTypeApply
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/03/21 21:26:31 [TRACE] ConfigTransformer: Starting for path: 
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.DiffTransformer
+2020/03/21 21:26:31 [TRACE] DiffTransformer starting
+2020/03/21 21:26:31 [TRACE] DiffTransformer: found Create change for artifactory_permission.first3 
+2020/03/21 21:26:31 [TRACE] DiffTransformer: artifactory_permission.first3 will be represented by artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] DiffTransformer complete
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+  artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OrphanResourceTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OrphanResourceTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/03/21 21:26:31 [TRACE] AttachResourceConfigTransformer: attaching to "artifactory_permission.first3" (*terraform.NodeApplyableResourceInstance) config from main.tf:6,1-43
+2020/03/21 21:26:31 [TRACE] AttachResourceConfigTransformer: attaching to "artifactory_permission.first3 (prepare state)" (*terraform.NodeApplyableResource) config from main.tf:6,1-43
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/03/21 21:26:31 [DEBUG] Resource state not found for node "artifactory_permission.first3", instance artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/03/21 21:26:31 [TRACE] ProviderConfigTransformer: attaching to "provider.artifactory" provider configuration from main.tf:1,1-23
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+  artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/03/21 21:26:31 [TRACE] ProviderTransformer: artifactory_permission.first3 (prepare state) is provided by provider.artifactory or inherited equivalent
+2020/03/21 21:26:31 [TRACE] ProviderTransformer: artifactory_permission.first3 is provided by provider.artifactory or inherited equivalent
+2020/03/21 21:26:31 [TRACE] ProviderTransformer: exact match for provider.artifactory serving artifactory_permission.first3 (prepare state)
+2020/03/21 21:26:31 [DEBUG] ProviderTransformer: "artifactory_permission.first3 (prepare state)" (*terraform.NodeApplyableResource) needs provider.artifactory
+2020/03/21 21:26:31 [TRACE] ProviderTransformer: exact match for provider.artifactory serving artifactory_permission.first3
+2020/03/21 21:26:31 [DEBUG] ProviderTransformer: "artifactory_permission.first3" (*terraform.NodeApplyableResourceInstance) needs provider.artifactory
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/03/21 21:26:31 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/03/21 21:26:31 [TRACE] AttachSchemaTransformer: attaching resource schema to artifactory_permission.first3 (prepare state)
+2020/03/21 21:26:31 [TRACE] AttachSchemaTransformer: attaching resource schema to artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.artifactory
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/03/21 21:26:31 [DEBUG] ReferenceTransformer: "artifactory_permission.first3 (prepare state)" references: []
+2020/03/21 21:26:31 [DEBUG] ReferenceTransformer: "artifactory_permission.first3" references: []
+2020/03/21 21:26:31 [DEBUG] ReferenceTransformer: "provider.artifactory" references: []
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/03/21 21:26:31 [TRACE] AttachDependenciesTransformer: artifactory_permission.first3 depends on []
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.PruneUnusedValuesTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.PruneUnusedValuesTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory (close) - *terraform.graphNodeCloseProvider
+    artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory (close) - *terraform.graphNodeCloseProvider
+    artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.artifactory (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/03/21 21:26:31 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/03/21 21:26:31 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+    artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+  artifactory_permission.first3 (prepare state) - *terraform.NodeApplyableResource
+    provider.artifactory - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+  provider.artifactory - *terraform.NodeApplyableProvider
+  provider.artifactory (close) - *terraform.graphNodeCloseProvider
+    artifactory_permission.first3 - *terraform.NodeApplyableResourceInstance
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.artifactory (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/03/21 21:26:31 [DEBUG] Starting graph walk: walkApply
+2020/03/21 21:26:31 [TRACE] dag/walk: updating graph
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "provider.artifactory"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "provider.artifactory (close)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "root"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "artifactory_permission.first3 (prepare state)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added new vertex: "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "provider.artifactory (close)" waiting on "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "root" waiting on "provider.artifactory (close)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "artifactory_permission.first3" waiting on "artifactory_permission.first3 (prepare state)"
+2020/03/21 21:26:31 [TRACE] dag/walk: added edge: "artifactory_permission.first3 (prepare state)" waiting on "provider.artifactory"
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "artifactory_permission.first3", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "artifactory_permission.first3 (prepare state)", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "provider.artifactory (close)", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "provider.artifactory"
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory": starting visit (*terraform.NodeApplyableProvider)
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory": evaluating
+2020/03/21 21:26:31 [TRACE] [walkApply] Entering eval tree: provider.artifactory
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-03-21T21:26:31.675+0100 [INFO]  plugin: configuring client automatic mTLS
+2020-03-21T21:26:31.708+0100 [DEBUG] plugin: starting plugin: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe args=[X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe]
+2020-03-21T21:26:31.710+0100 [DEBUG] plugin: plugin started: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe pid=28224
+2020-03-21T21:26:31.710+0100 [DEBUG] plugin: waiting for RPC address: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe
+2020-03-21T21:26:31.770+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 2020/03/21 21:26:31 LAJ No Server found:
+2020-03-21T21:26:31.773+0100 [INFO]  plugin.terraform-provider-artifactory.exe: configuring server automatic mTLS: timestamp=2020-03-21T21:26:31.772+0100
+2020-03-21T21:26:31.799+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: plugin address: address=127.0.0.1:10000 network=tcp timestamp=2020-03-21T21:26:31.799+0100
+2020-03-21T21:26:31.799+0100 [DEBUG] plugin: using plugin: version=5
+2020/03/21 21:26:31 [TRACE] BuiltinEvalContext: Initialized "artifactory" provider for provider.artifactory
+2020/03/21 21:26:31 [TRACE] <root>: eval: terraform.EvalNoop
+2020/03/21 21:26:31 [TRACE] <root>: eval: terraform.EvalNoop
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2020/03/21 21:26:31 [TRACE] buildProviderConfig for provider.artifactory: using explicit config only
+2020/03/21 21:26:31 [TRACE] GRPCProvider: GetSchema
+2020/03/21 21:26:31 [TRACE] GRPCProvider: Configure
+2020/03/21 21:26:31 [TRACE] [walkApply] Exiting eval tree: provider.artifactory
+2020/03/21 21:26:31 [TRACE] vertex "provider.artifactory": visit complete
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "artifactory_permission.first3 (prepare state)"
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3 (prepare state)": starting visit (*terraform.NodeApplyableResource)
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3 (prepare state)": evaluating
+2020/03/21 21:26:31 [TRACE] [walkApply] Entering eval tree: artifactory_permission.first3 (prepare state)
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalWriteResourceState
+2020/03/21 21:26:31 [TRACE] [walkApply] Exiting eval tree: artifactory_permission.first3 (prepare state)
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3 (prepare state)": visit complete
+2020/03/21 21:26:31 [TRACE] dag/walk: visiting "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": starting visit (*terraform.NodeApplyableResourceInstance)
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": evaluating
+2020/03/21 21:26:31 [TRACE] [walkApply] Entering eval tree: artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/03/21 21:26:31 [TRACE] EvalReadDiff: Read Create change from plan for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalIf
+2020/03/21 21:26:31 [TRACE] <root>: eval: terraform.EvalNoop
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalIf
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/03/21 21:26:31 [TRACE] EvalReadState: reading state for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] EvalReadState: no state present for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalReadDiff
+2020/03/21 21:26:31 [TRACE] EvalReadDiff: Read Create change from plan for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalDiff
+2020/03/21 21:26:31 [TRACE] Re-validating config for "artifactory_permission.first3"
+2020/03/21 21:26:31 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/03/21 21:26:31 [TRACE] GRPCProvider: PlanResourceChange
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalCheckPlannedChange
+2020/03/21 21:26:31 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action Create) matches planned change (action Create)
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalReadState
+2020/03/21 21:26:31 [TRACE] EvalReadState: reading state for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] EvalReadState: no state present for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalReduceDiff
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalIf
+2020/03/21 21:26:31 [TRACE] <root>: eval: terraform.EvalNoop
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalApplyPre
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalApply
+2020/03/21 21:26:31 [DEBUG] artifactory_permission.first3: applying the planned Create change
+2020/03/21 21:26:31 [TRACE] GRPCProvider: ApplyResourceChange
+2020-03-21T21:26:31.858+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 2020/03/21 21:26:31 LAJ newPermissionFromResource
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: panic: interface conversion: interface {} is map[string]interface {}, not []string
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: goroutine 50 [running]:
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: main.newPermissionFromResource(0xc000292690, 0xfca418)
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 	X:/dev/terraform-provider-artifactory/ressouce_permission.go:87 +0x11d
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: main.resourcePermissionCreate(0xc000292690, 0xeb9080, 0xc000203020, 0x2, 0x18cd780)
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 	X:/dev/terraform-provider-artifactory/ressouce_permission.go:98 +0x32
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Resource).Apply(0xc00016c280, 0xc00009a7d0, 0xc00090ce60, 0xeb9080, 0xc000203020, 0xe42f01, 0xc0003f9158, 0xc000553f80)
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 	C:/Users/larsj/go/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.7.0/helper/schema/resource.go:305 +0x36c
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Provider).Apply(0xc00016c300, 0xc000a158e0, 0xc00009a7d0, 0xc00090ce60, 0xc000929168, 0xc00008e0f8, 0xe44ac0)
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 	C:/Users/larsj/go/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.7.0/helper/schema/provider.go:294 +0xa0
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: github.com/hashicorp/terraform-plugin-sdk/internal/helper/plugin.(*GRPCProviderServer).ApplyResourceChange(0xc0000065a8, 0x11cd400, 0xc0004695f0, 0xc000086420, 0xc0000065a8, 0xc0004695f0, 0xc000217a48)
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 	C:/Users/larsj/go/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.7.0/internal/helper/plugin/grpc_provider.go:885 +0x8bb
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: github.com/hashicorp/terraform-plugin-sdk/internal/tfplugin5._Provider_ApplyResourceChange_Handler(0xf48380, 0xc0000065a8, 0x11cd400, 0xc0004695f0, 0xc000086300, 0x0, 0x11cd400, 0xc0004695f0, 0xc0002845a0, 0x1db)
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 	C:/Users/larsj/go/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.7.0/internal/tfplugin5/tfplugin5.pb.go:3189 +0x21e
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: google.golang.org/grpc.(*Server).processUnaryRPC(0xc00037c160, 0x11d7840, 0xc000604780, 0xc000188100, 0xc000202510, 0x18917e0, 0x0, 0x0, 0x0)
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 	C:/Users/larsj/go/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:995 +0x467
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: google.golang.org/grpc.(*Server).handleStream(0xc00037c160, 0x11d7840, 0xc000604780, 0xc000188100, 0x0)
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 	C:/Users/larsj/go/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:1275 +0xd44
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: google.golang.org/grpc.(*Server).serveStreams.func1.1(0xc000212100, 0xc00037c160, 0x11d7840, 0xc000604780, 0xc000188100)
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 	C:/Users/larsj/go/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:710 +0xa8
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2020-03-21T21:26:31.862+0100 [DEBUG] plugin.terraform-provider-artifactory.exe: 	C:/Users/larsj/go/pkg/mod/google.golang.org/grpc@v1.23.0/server.go:708 +0xa8
+2020/03/21 21:26:31 [DEBUG] artifactory_permission.first3: apply errored, but we're indicating that via the Error pointer rather than returning it: rpc error: code = Unavailable desc = transport is closing
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2020/03/21 21:26:31 [TRACE] EvalMaybeTainted: artifactory_permission.first3 encountered an error during creation, so it is now marked as tainted
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/03/21 21:26:31 [TRACE] EvalWriteState: removing state object for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalApplyProvisioners
+2020/03/21 21:26:31 [TRACE] EvalApplyProvisioners: artifactory_permission.first3 has no state, so skipping provisioners
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalMaybeTainted
+2020/03/21 21:26:31 [TRACE] EvalMaybeTainted: artifactory_permission.first3 encountered an error during creation, so it is now marked as tainted
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/03/21 21:26:31 [TRACE] EvalWriteState: removing state object for artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalIf
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalIf
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/03/21 21:26:31 [TRACE] <root>: eval: *terraform.EvalApplyPost
+2020/03/21 21:26:31 [ERROR] <root>: eval: *terraform.EvalApplyPost, err: rpc error: code = Unavailable desc = transport is closing
+2020/03/21 21:26:31 [ERROR] <root>: eval: *terraform.EvalSequence, err: rpc error: code = Unavailable desc = transport is closing
+2020/03/21 21:26:31 [TRACE] [walkApply] Exiting eval tree: artifactory_permission.first3
+2020/03/21 21:26:31 [TRACE] vertex "artifactory_permission.first3": visit complete
+2020/03/21 21:26:31 [TRACE] dag/walk: upstream of "provider.artifactory (close)" errored, so skipping
+2020/03/21 21:26:31 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2020/03/21 21:26:31 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2020/03/21 21:26:31 [TRACE] statemgr.Filesystem: not making a backup, because the new snapshot is identical to the old
+2020/03/21 21:26:31 [TRACE] statemgr.Filesystem: no state changes since last snapshot
+2020/03/21 21:26:31 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2020/03/21 21:26:31 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/03/21 21:26:31 [TRACE] statemgr.Filesystem: unlocked by closing terraform.tfstate
+2020-03-21T21:26:31.873+0100 [DEBUG] plugin: plugin process exited: path=X:\dev\terraform-provider-artifactory\terraform-provider-artifactory.exe pid=28224 error="exit status 2"
+2020-03-21T21:26:31.873+0100 [DEBUG] plugin: plugin exited
